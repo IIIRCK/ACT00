@@ -51,7 +51,16 @@ public class Main {
         connection.close();
     }
 
-
+    public void delete(int a ) throws SQLException {
+        String qry = "DELETE FROM PRUEBA WHERE ID_PRUEBA = ? ";
+        PreparedStatement ps = connection.prepareStatement(qry);
+        try{
+            ps.setInt(1,a);
+            ps.executeUpdate();
+        }finally {
+            ps.close();
+        }
+    }
 
     public static void println(String x){
         System.out.println(x);
