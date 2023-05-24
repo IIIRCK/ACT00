@@ -74,7 +74,7 @@ public class Main {
         m.select();
         //m.insert("aaa");
         //m.select();
-        m.update(0,"hola");
+        m.update(0,"fecha");
         //m.select();
         m.delete(20);
         m.close();
